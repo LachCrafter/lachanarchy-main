@@ -11,6 +11,7 @@ out
 *.iws
 *.iml
 .idea
+target
 # Gradle.
 build
 .gradle
