@@ -14,6 +14,7 @@ public final class Lachanarchy_main extends JavaPlugin {
 
         // Register listeners/events.
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
+        // TODO: anti netheroof
 
         getLogger().info("Lachanarchy Main enabled");
     }
