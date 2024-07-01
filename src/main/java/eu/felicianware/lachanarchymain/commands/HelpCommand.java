@@ -43,8 +43,9 @@ public class HelpCommand implements CommandExecutor {
                 .append(Component.newline())
                 .append(Component.text("/stats", NamedTextColor.GOLD)
                         .append(Component.text(" - Show the server stats.", NamedTextColor.GOLD)))
+                .append(Component.newline())
                 .append(Component.text("=======", NamedTextColor.GOLD)
-                        .append(Component.text("==========", NamedTextColor.DARK_AQUA))
+                        .append(Component.text("==========", NamedTextColor.GOLD))
                         .append(Component.text("=======", NamedTextColor.GOLD)))
                 .build();
 

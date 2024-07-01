@@ -6,3 +6,6 @@ commands:
   discord:
     description: Provides the Discord link.
     usage: /discord
+  help:
+    description: Get help.
+    usage: /help

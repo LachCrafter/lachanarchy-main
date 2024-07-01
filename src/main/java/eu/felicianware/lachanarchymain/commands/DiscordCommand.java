@@ -16,7 +16,7 @@ public class DiscordCommand implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("discord")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                player.sendMessage(ChatColor.GOLD + "You can join our Discord Server here: https://discord.gg/WrkrRYb3mj");
+                player.sendMessage(ChatColor.GOLD + "You can join the Discord Server here:https://discord.gg/WrkrRYb3mj");
             }
             return true;
         }
