@@ -1,0 +1,4 @@
+name: lachanarchy-main
+version: '${project.version}'
+main: eu.felicianware.lachanarchymain.Lachanarchy_main
+api-version: '1.20'
