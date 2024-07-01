@@ -1,7 +1,7 @@
 package eu.felicianware.lachanarchymain;
 
-import eu.felicianware.lachanarchymain.listeners.CrystalDelay;
 import eu.felicianware.lachanarchymain.commands.DiscordCommand;
+import eu.felicianware.lachanarchymain.listeners.CrystalDelay;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Lachanarchy_main extends JavaPlugin {
@@ -10,6 +10,7 @@ public final class Lachanarchy_main extends JavaPlugin {
     public void onEnable() {
         // Register commands.
         this.getCommand("discord").setExecutor(new DiscordCommand());
+        // TODO: help command
 
         // Register listeners/events.
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
