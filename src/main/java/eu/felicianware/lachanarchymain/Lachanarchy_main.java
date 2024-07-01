@@ -3,9 +3,6 @@ package eu.felicianware.lachanarchymain;
 import eu.felicianware.lachanarchymain.listeners.CrystalDelay;
 import eu.felicianware.lachanarchymain.commands.DiscordCommand;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.logging.Logger;
 
 public final class Lachanarchy_main extends JavaPlugin {
 
