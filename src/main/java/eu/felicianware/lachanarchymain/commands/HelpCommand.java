@@ -46,7 +46,7 @@ public class HelpCommand implements CommandExecutor {
                 .append(Component.newline())
                 .append(Component.text("=======", NamedTextColor.GOLD)
                         .append(Component.text("==========", NamedTextColor.GOLD))
-                        .append(Component.text("=======", NamedTextColor.GOLD)))
+                        .append(Component.text("======", NamedTextColor.GOLD)))
                 .build();
 
         player.sendMessage(helpMessage);
