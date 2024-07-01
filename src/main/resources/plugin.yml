@@ -9,3 +9,6 @@ commands:
   help:
     description: Get help.
     usage: /help
+  kill:
+    description: Kills you.
+    usage: /kill
