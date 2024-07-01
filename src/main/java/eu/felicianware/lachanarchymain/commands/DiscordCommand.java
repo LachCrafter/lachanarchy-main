@@ -21,7 +21,7 @@ public class DiscordCommand implements CommandExecutor {
         Component discordMessage = Component.text()
                 .append(Component.text("You can join the discord server here: ", NamedTextColor.GOLD))
                 .append(Component.newline())
-                .append(Component.text("https://discord.gg/WrkrRYb3mj", NamedTextColor.BLUE))
+                .append(Component.text("https://discord.gg/WrkrRYb3mj", NamedTextColor.GOLD))
                 .build();
 
         player.sendMessage(discordMessage);
