@@ -1,0 +1,8 @@
+name: lachanarchy-main
+version: '1.0-SNAPSHOT'
+main: eu.felicianware.lachanarchymain.Lachanarchy_main
+api-version: '1.20'
+commands:
+  discord:
+    description: Provides the Discord link.
+    usage: /discord
