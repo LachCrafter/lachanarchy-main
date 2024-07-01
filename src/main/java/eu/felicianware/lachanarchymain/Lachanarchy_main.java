@@ -13,7 +13,6 @@ public final class Lachanarchy_main extends JavaPlugin {
         // Register commands.
         this.getCommand("discord").setExecutor(new DiscordCommand());
         this.getCommand("help").setExecutor(new HelpCommand());
-        // TODO: help command
 
         // Register listeners/events.
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
