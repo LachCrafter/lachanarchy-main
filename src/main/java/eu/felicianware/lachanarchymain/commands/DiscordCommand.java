@@ -1,9 +1,13 @@
 package eu.felicianware.lachanarchymain.commands;
 
+import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.Formatter;
 
 public class DiscordCommand implements CommandExecutor {
 
@@ -12,7 +16,7 @@ public class DiscordCommand implements CommandExecutor {
         if (command.getName().equalsIgnoreCase("discord")) {
             if (sender instanceof Player) {
                 Player player = (Player) sender;
-                player.sendMessage("Join our Discord: https://discord.gg/yourserver");
+                player.sendMessage(ChatColor.GOLD + "You can join our Discord Server here: https://discord.gg/WrkrRYb3mj");
             }
             return true;
         }
