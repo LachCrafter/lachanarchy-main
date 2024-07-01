@@ -3,6 +3,9 @@ package eu.felicianware.lachanarchymain;
 import eu.felicianware.lachanarchymain.listeners.CrystalDelay;
 import eu.felicianware.lachanarchymain.commands.DiscordCommand;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.logging.Logger;
 
 public final class Lachanarchy_main extends JavaPlugin {
 
@@ -14,11 +17,11 @@ public final class Lachanarchy_main extends JavaPlugin {
         // Register listeners/events.
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
 
-        System.out.println("Lachanarchy_main loaded");
+        getLogger().info("Lachanarchy Main enabled");
     }
 
     @Override
     public void onDisable() {
-        System.out.println("Lachanarchy_main unloaded");
+        getLogger().info("Lachanarchy Main disabled");
     }
 }
