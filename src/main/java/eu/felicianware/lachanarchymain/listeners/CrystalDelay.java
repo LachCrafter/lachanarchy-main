@@ -28,11 +28,11 @@ public class CrystalDelay implements Listener {
                         long breakTime = System.currentTimeMillis();
                         long timeDifference = breakTime - placeTime;
 
-                        if (timeDifference > 250) { // 250ms = 5 ticks
+                        if (timeDifference > 100) { // 250ms = 5 ticks
                             event.setCancelled(true);
                         }
                     }
-                }, 5L);
+                }, 3L);
             }
         }
     }
