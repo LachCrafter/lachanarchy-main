@@ -1,13 +1,13 @@
 package eu.felicianware.lachanarchymain.listeners;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Material;
-import org.bukkit.block.Block;
+import org.bukkit.Location;
+import org.bukkit.World;
+import org.bukkit.entity.EnderCrystal;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 public class CrystalDelay implements Listener {
     private final Plugin plugin;
@@ -17,23 +17,24 @@ public class CrystalDelay implements Listener {
     }
 
     @EventHandler
-    public void onPlayerInteract(PlayerInteractEvent event) {
-        if (event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-            Block clickedBlock = event.getClickedBlock();
-            if (clickedBlock != null && clickedBlock.getType() == Material.END_CRYSTAL) {
-                long placeTime = System.currentTimeMillis();
-
-                Bukkit.getScheduler().runTaskLater(plugin, () -> {
-                    if (clickedBlock.getType() == Material.END_CRYSTAL) {
-                        long breakTime = System.currentTimeMillis();
-                        long timeDifference = breakTime - placeTime;
-
-                        if (timeDifference > 80) {
-                            event.setCancelled(true);
-                        }
-                    }
-                }, 2L);
+    public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
+        if (!(event.getEntity() instanceof EnderCrystal))
+            return;
+        if (!(event.getDamager() instanceof org.bukkit.entity.Player))
+            return;
+        event.setCancelled(true);
+        final EnderCrystal crystal = (EnderCrystal)event.getEntity();
+        final Location loc = crystal.getLocation();
+        final World world = loc.getWorld();
+        if (world == null)
+            return;
+        (new BukkitRunnable() {
+            public void run() {
+                if (crystal.isDead())
+                    return;
+                crystal.remove();
+                world.createExplosion(loc, 4.0F, false, true);
             }
-        }
+        }).runTaskLater((Plugin)this, 4L);
     }
 }
