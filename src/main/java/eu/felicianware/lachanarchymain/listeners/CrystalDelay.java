@@ -23,18 +23,18 @@ public class CrystalDelay implements Listener {
         if (!(event.getDamager() instanceof org.bukkit.entity.Player))
             return;
         event.setCancelled(true);
-        final EnderCrystal crystal = (EnderCrystal)event.getEntity();
+        final EnderCrystal crystal = (EnderCrystal) event.getEntity();
         final Location loc = crystal.getLocation();
         final World world = loc.getWorld();
         if (world == null)
             return;
-        (new BukkitRunnable() {
+        new BukkitRunnable() {
             public void run() {
                 if (crystal.isDead())
                     return;
                 crystal.remove();
                 world.createExplosion(loc, 4.0F, false, true);
             }
-        }).runTaskLater((Plugin)this, 4L);
+        }.runTaskLater(plugin, 4L);
     }
 }
