@@ -33,10 +33,12 @@ public class CrystalDelay implements Listener {
         if (world == null)
             return;
 
-        Bukkit.getScheduler().runTaskLater(plugin, new Runnable() {
+        BukkitScheduler scheduler = Bukkit.getScheduler();
+
+        scheduler.runTaskLater(plugin, new Runnable() {
             @Override
             public void run() {
-                Bukkit.getScheduler().runTask(plugin, new Runnable() {
+                scheduler.runTask(plugin, new Runnable() {
                     @Override
                     public void run() {
                         if (!crystal.isDead()) {
