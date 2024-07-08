@@ -25,9 +25,9 @@ public class HelpCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         Component helpMessage = Component.text()
-                .append(Component.text("======= ", NamedTextColor.GOLD)
+                .append(Component.text("------- ", NamedTextColor.GOLD)
                         .append(Component.text("Commands", NamedTextColor.DARK_AQUA))
-                        .append(Component.text(" =======", NamedTextColor.GOLD)))
+                        .append(Component.text(" -------", NamedTextColor.GOLD)))
                 .append(Component.newline())
                 .append(Component.text("/help", NamedTextColor.GOLD)
                         .append(Component.text(" - Shows this help menu.", NamedTextColor.GOLD)))
@@ -44,9 +44,9 @@ public class HelpCommand implements CommandExecutor {
                 .append(Component.text("/stats", NamedTextColor.GOLD)
                         .append(Component.text(" - Show the server stats.", NamedTextColor.GOLD)))
                 .append(Component.newline())
-                .append(Component.text("=======", NamedTextColor.GOLD)
-                        .append(Component.text("==========", NamedTextColor.GOLD))
-                        .append(Component.text("======", NamedTextColor.GOLD)))
+                .append(Component.text("-------", NamedTextColor.GOLD)
+                        .append(Component.text("----------", NamedTextColor.GOLD))
+                        .append(Component.text("------", NamedTextColor.GOLD)))
                 .build();
 
         player.sendMessage(helpMessage);
