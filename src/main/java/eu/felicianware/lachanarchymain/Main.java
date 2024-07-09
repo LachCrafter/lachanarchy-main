@@ -9,7 +9,7 @@ import eu.felicianware.lachanarchymain.listeners.JoinLeaveMessages;
 import eu.felicianware.lachanarchymain.listeners.RandomSpawn;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Lachanarchy_main extends JavaPlugin {
+public final class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {

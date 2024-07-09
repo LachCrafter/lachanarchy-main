@@ -1,6 +1,6 @@
 name: lachanarchy-main
 version: '${project.version}'
-main: eu.felicianware.lachanarchymain.Lachanarchy_main
+main: eu.felicianware.lachanarchymain.Main
 api-version: '1.20'
 folia-supported: true
 commands:
