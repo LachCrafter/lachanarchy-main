@@ -5,6 +5,7 @@ import eu.felicianware.lachanarchymain.commands.HelpCommand;
 import eu.felicianware.lachanarchymain.commands.KillCommand;
 import eu.felicianware.lachanarchymain.listeners.Antispam;
 import eu.felicianware.lachanarchymain.listeners.CrystalDelay;
+import eu.felicianware.lachanarchymain.listeners.JoinLeaveMessages;
 import eu.felicianware.lachanarchymain.listeners.RandomSpawn;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,6 +22,7 @@ public final class Lachanarchy_main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
         getServer().getPluginManager().registerEvents(new Antispam(), this);
         getServer().getPluginManager().registerEvents(new RandomSpawn(), this);
+        getServer().getPluginManager().registerEvents(new JoinLeaveMessages(), this);
 
         getLogger().info("Lachanarchy Main enabled");
     }

@@ -5,12 +5,19 @@ import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.Plugin;
 
 import java.util.HashMap;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 public class Antispam implements Listener {
+
+    private final Plugin plugin;
+
+    public Antispam(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     private final HashMap<UUID, Long> lastMessageTime = new HashMap<>();
     private final HashMap<UUID, String> lastMessageContent = new HashMap<>();

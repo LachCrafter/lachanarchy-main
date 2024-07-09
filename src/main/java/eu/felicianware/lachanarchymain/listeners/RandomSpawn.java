@@ -16,7 +16,11 @@ import java.util.Random;
 public class RandomSpawn  implements Listener {
 
     private final Random random = new Random();
+    private final Plugin plugin;
 
+    public RandomSpawn(Plugin plugin) {
+        this.plugin = plugin;
+    }
 
     @EventHandler
     public void onPlayerRespawn(PlayerRespawnEvent event) {
