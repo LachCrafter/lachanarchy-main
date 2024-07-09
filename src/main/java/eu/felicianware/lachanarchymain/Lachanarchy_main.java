@@ -20,9 +20,9 @@ public final class Lachanarchy_main extends JavaPlugin {
 
         // Register listeners/events.
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
-        getServer().getPluginManager().registerEvents(new Antispam(), this);
-        getServer().getPluginManager().registerEvents(new RandomSpawn(), this);
-        getServer().getPluginManager().registerEvents(new JoinLeaveMessages(), this);
+        getServer().getPluginManager().registerEvents(new Antispam(this), this);
+        getServer().getPluginManager().registerEvents(new RandomSpawn(this), this);
+        getServer().getPluginManager().registerEvents(new JoinLeaveMessages(this), this);
 
         getLogger().info("Lachanarchy Main enabled");
     }
