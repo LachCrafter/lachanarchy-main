@@ -30,10 +30,10 @@ public class RandomSpawn  implements Listener {
     }
 
     private Location getRandomSafeLocation(World world, int maxX, int maxZ) {
-        for (int i = 0; i < 10; i++) { // Try 10 times to find a safe location
+        for (int i = 0; i < 10; i++) {
             int x = random.nextInt(maxX * 2) - maxX;
             int z = random.nextInt(maxZ * 2) - maxZ;
-            int y = world.getHighestBlockYAt(x, z) + 1; // Get the highest Y at the x,z and add 1 to get air block above
+            int y = world.getHighestBlockYAt(x, z) + 1;
 
             Location location = new Location(world, x, y, z);
 
@@ -41,11 +41,10 @@ public class RandomSpawn  implements Listener {
                 return location;
             }
         }
-        return null; // If no safe location found after 10 tries
+        return null;
     }
 
     private boolean isLocationSafe(Location location) {
-        // Check if the block at the location is air and the block below is not air
         Material blockAtLocation = location.getBlock().getType();
         Material blockBelow = location.clone().add(0, -1, 0).getBlock().getType();
 
