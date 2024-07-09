@@ -13,12 +13,12 @@ public final class Lachanarchy_main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Register commands.
+        // Register commands
         this.getCommand("discord").setExecutor(new DiscordCommand());
         this.getCommand("help").setExecutor(new HelpCommand());
         this.getCommand("kill").setExecutor(new KillCommand());
 
-        // Register listeners/events.
+        // Register listeners
         getServer().getPluginManager().registerEvents(new CrystalDelay(this), this);
         getServer().getPluginManager().registerEvents(new Antispam(this), this);
         getServer().getPluginManager().registerEvents(new RandomSpawn(this), this);
