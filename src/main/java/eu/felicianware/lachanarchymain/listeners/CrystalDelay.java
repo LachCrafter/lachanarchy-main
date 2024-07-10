@@ -21,8 +21,6 @@ import java.util.UUID;
 
 public class CrystalDelay implements Listener {
     private final Plugin plugin;
-    private final long placeDelayMillis = 100;
-    private final boolean updateInv = true;
     private final Set<UUID> placeCooldowns = new HashSet<>();
 
     public CrystalDelay(Plugin plugin) {
@@ -30,8 +28,8 @@ public class CrystalDelay implements Listener {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-    public void onCrystalPlace(PlayerInteractEvent event) {
-        if (placeDelayMillis <= 0) return;
+    public void onCrystalPlace(PlayerInteractEvent event) {      
+        long placeDelayMillis = 100;
         if (event.getAction() != Action.RIGHT_CLICK_BLOCK) return;
         final ItemStack interactItem = event.getItem();
         if (interactItem == null || interactItem.getType() != Material.END_CRYSTAL) return;
@@ -41,6 +39,7 @@ public class CrystalDelay implements Listener {
 
         if (placeCooldowns.contains(playerUUID)) {
             event.setCancelled(true);
+            boolean updateInv = true;
             if (updateInv) player.updateInventory();
         } else {
             placeCooldowns.add(playerUUID);
@@ -67,7 +66,7 @@ public class CrystalDelay implements Listener {
         regionScheduler.runDelayed(plugin, loc, handle -> {
             if (!crystal.isDead()) {
                 crystal.remove();
-                world.createExplosion(loc, 4.0F, false, true);
+                world.createExplosion(loc, 6.0F, false, true);
             }
         }, 4L);
     }

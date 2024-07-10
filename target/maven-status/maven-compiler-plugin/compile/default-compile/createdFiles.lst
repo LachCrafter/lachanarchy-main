@@ -1,6 +1,8 @@
 eu/felicianware/lachanarchymain/commands/HelpCommand.class
 eu/felicianware/lachanarchymain/listeners/CrystalDelay.class
-eu/felicianware/lachanarchymain/Lachanarchy_main.class
+eu/felicianware/lachanarchymain/Main.class
+eu/felicianware/lachanarchymain/listeners/RandomSpawn.class
 eu/felicianware/lachanarchymain/commands/KillCommand.class
 eu/felicianware/lachanarchymain/commands/DiscordCommand.class
+eu/felicianware/lachanarchymain/listeners/JoinLeaveMessages.class
 eu/felicianware/lachanarchymain/listeners/Antispam.class
