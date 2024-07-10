@@ -9,6 +9,7 @@ import eu.felicianware.lachanarchymain.listeners.JoinLeaveMessages;
 import eu.felicianware.lachanarchymain.listeners.RandomSpawn;
 import org.bukkit.plugin.java.JavaPlugin;
 
+@SuppressWarnings("unused")
 public final class Main extends JavaPlugin {
 
     @Override
@@ -26,11 +27,11 @@ public final class Main extends JavaPlugin {
 
         // Call events
 
-        getLogger().info("Lachanarchy Main enabled");
+        getLogger().info("2b2t-core enabled");
     }
 
     @Override
     public void onDisable() {
-        getLogger().info("Lachanarchy Main disabled");
+        getLogger().info("2b2t-core disabled");
     }
 }
