@@ -24,6 +24,8 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new RandomSpawn(this), this);
         getServer().getPluginManager().registerEvents(new JoinLeaveMessages(this), this);
 
+        // Call events
+
         getLogger().info("Lachanarchy Main enabled");
     }
 
