@@ -20,7 +20,7 @@ public class JoinLeaveMessages implements Listener {
         Player joiningPlayer = event.getPlayer();
         Component joinMessage = Component.text(joiningPlayer.displayName() + " joined.", NamedTextColor.DARK_GRAY);
 
-        Bukkit.getServer().broadcast(joinMessage);
+        Bukkit.getServer().sendMessage(joinMessage);
 
     }
 
@@ -29,7 +29,7 @@ public class JoinLeaveMessages implements Listener {
         Player leaveingPlayer = event.getPlayer();
         Component leaveMessage = Component.text(leaveingPlayer.displayName() + " left.", NamedTextColor.DARK_GRAY);
 
-        Bukkit.getServer().broadcast(leaveMessage);
+        Bukkit.getServer().sendMessage(leaveMessage);
 
     }
 
