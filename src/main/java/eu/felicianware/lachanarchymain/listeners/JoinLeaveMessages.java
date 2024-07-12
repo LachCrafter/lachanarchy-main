@@ -26,6 +26,7 @@ public class JoinLeaveMessages implements Listener {
                 .append(Component.text(" joined.", NamedTextColor.DARK_GRAY))
                 .build();
 
+        event.joinMessage(null);
         Bukkit.getServer().sendMessage(joinMessage);
     }
 
@@ -37,6 +38,7 @@ public class JoinLeaveMessages implements Listener {
                 .append(Component.text(" left.", NamedTextColor.DARK_GRAY))
                 .build();
 
+        event.quitMessage(null);
         Bukkit.getServer().sendMessage(leaveMessage);
     }
 }
