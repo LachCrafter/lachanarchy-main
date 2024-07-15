@@ -29,7 +29,7 @@ public class CrystalDelay implements Listener {
 
     private static final long PLACE_DELAY_MILLIS = 100;
     private static final long PLACE_DELAY_TICKS = PLACE_DELAY_MILLIS / 50;
-    private static final long EXPLOSION_DELAY_TICKS = 4L;
+    private static final long EXPLOSION_DELAY_TICKS = 3L;
     private static final float EXPLOSION_POWER = 6.0F;
 
     private final Plugin plugin;
