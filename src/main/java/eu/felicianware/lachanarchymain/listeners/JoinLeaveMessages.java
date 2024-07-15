@@ -10,6 +10,10 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.plugin.Plugin;
 
+/**
+ *  Sends join and leave messages from the old 2b2t style.
+ */
+
 public class JoinLeaveMessages implements Listener {
 
     private final Plugin plugin;
@@ -18,6 +22,9 @@ public class JoinLeaveMessages implements Listener {
         this.plugin = plugin;
     }
 
+    /**
+     * @param event The event to send the join-message when the player joins
+     */
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
@@ -30,6 +37,9 @@ public class JoinLeaveMessages implements Listener {
         Bukkit.getServer().sendMessage(joinMessage);
     }
 
+    /**
+     * @param event The event to send the leave-message when the player leaves
+     */
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
