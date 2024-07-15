@@ -13,6 +13,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.Random;
 
+/**
+ *  Attempts to spawn the player on a random location in a 200 x 200 radius.
+ */
 public class RandomSpawn  implements Listener {
 
     private final Random random = new Random();
@@ -22,6 +25,11 @@ public class RandomSpawn  implements Listener {
         this.plugin = plugin;
     }
 
+
+    /**
+     *
+     * @param event catch if player respawns
+     */
     @EventHandler
     public void onPlayerRespawn(PlayerRespawnEvent event) {
         Player player = event.getPlayer();
@@ -33,6 +41,9 @@ public class RandomSpawn  implements Listener {
         }
     }
 
+    /**
+     * get a safe spawn location in the radius.
+     */
     private Location getRandomSafeLocation(World world, int maxX, int maxZ) {
         for (int i = 0; i < 10; i++) {
             int x = random.nextInt(maxX * 2) - maxX;
@@ -48,6 +59,11 @@ public class RandomSpawn  implements Listener {
         return null;
     }
 
+    /**
+     *
+     * @param location check if location is save
+     * @return is air there
+     */
     private boolean isLocationSafe(Location location) {
         Material blockAtLocation = location.getBlock().getType();
         Material blockBelow = location.clone().add(0, -1, 0).getBlock().getType();
