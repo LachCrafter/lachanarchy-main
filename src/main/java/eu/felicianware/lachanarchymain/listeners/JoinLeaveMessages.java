@@ -22,8 +22,8 @@ public class JoinLeaveMessages implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         Component joinMessage = Component.text()
-                .append(Component.text(player.getName(), NamedTextColor.DARK_GRAY))
-                .append(Component.text(" joined.", NamedTextColor.DARK_GRAY))
+                .append(Component.text(player.getName(), NamedTextColor.GRAY))
+                .append(Component.text(" joined.", NamedTextColor.GRAY))
                 .build();
 
         event.joinMessage(null);
@@ -34,8 +34,8 @@ public class JoinLeaveMessages implements Listener {
     public void onLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
         Component leaveMessage = Component.text()
-                .append(Component.text(player.getName(), NamedTextColor.DARK_GRAY))
-                .append(Component.text(" left.", NamedTextColor.DARK_GRAY))
+                .append(Component.text(player.getName(), NamedTextColor.GRAY))
+                .append(Component.text(" left.", NamedTextColor.GRAY))
                 .build();
 
         event.quitMessage(null);
