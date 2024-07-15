@@ -21,11 +21,10 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * CrystalDelay is a deprecated listener class that manages the delay for placing End Crystals
+ * CrystalDelay is a listener class that manages the delay for placing End Crystals
  * and handles their explosion events in the game.
  */
 
-@Deprecated
 public class CrystalDelay implements Listener {
 
     private static final long PLACE_DELAY_MILLIS = 100;
