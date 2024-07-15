@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
+@Deprecated
 public class Antispam implements Listener {
 
     private final Plugin plugin;
